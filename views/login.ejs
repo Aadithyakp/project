@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/head'); %>
+  <body>
+    <%- include('layouts/header'); %>
+    <header class="header" style="background-image: url('https://media.istockphoto.com/id/1788265199/photo/two-factor-authentication-security-login-in-securely-to-her-laptop.jpg?s=1024x1024&w=is&k=20&c=BX541as5OpzIYhdZoZ3bplOVoRkIzzzVsYyD09KDyhg=')">
+      <div class="header-content">
+          <h1>Login</h1>
+          <p>Enter you credentials to Login / SignUp</p>
+      </div>
+  </header>
+    <main>
+      <div class="container">
+        <form action="/userLogin" method="post">
+          <h3><b>Login</b></h3>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="username"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Login</button>
+          <h5 style="color: red; text-align: center"><%- errorMsg %></h5>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
