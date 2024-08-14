@@ -6,13 +6,13 @@ const appointment = require("./../models/appointment");
 const userSchema = new Schema({
   firstName: {
     type: String,
-    default: "",
+    default: "Default",
     required: true,
   },
-  lastName: { type: String, default: "NA", required: true },
+  lastName: { type: String, default: "Default", required: true },
   licenseNo: {
     type: String,
-    default: "",
+    default: "Default",
     required: true,
   },
   age: {
@@ -25,10 +25,10 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   userType: { type: String, required: true },
   carDetails: {
-    make: { type: String, default: "", required: true },
-    model: { type: String, default: "", required: true },
+    make: { type: String, default: "Default", required: true },
+    model: { type: String, default: "Default", required: true },
     year: { type: Number, default: 0, required: true },
-    plateNo: { type: String, default: "", required: true },
+    plateNo: { type: String, default: "Default", required: true },
   },
   appointmentId: {
     type: mongoose.Schema.Types.ObjectId,
